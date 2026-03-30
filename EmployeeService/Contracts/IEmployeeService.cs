@@ -14,8 +14,10 @@ namespace EmployeeService.Contracts
         Task<EmployeeDto> GetEmployeeByIdAsync(int id);
 
         [OperationContract]
-        [WebInvoke(Method = "PUT", UriTemplate = "EnableEmployee?id={id}",
-            BodyStyle = WebMessageBodyStyle.WrappedRequest)]
-        Task EnableEmployeeAsync(int id, int enable);
+        [WebInvoke(Method = "PUT", UriTemplate = "EnableEmployee",
+            RequestFormat = WebMessageFormat.Json,
+            ResponseFormat = WebMessageFormat.Json,
+            BodyStyle = WebMessageBodyStyle.Bare)]
+        Task EnableEmployeeAsync(EnableEmployeeRequest request);
     }
 }

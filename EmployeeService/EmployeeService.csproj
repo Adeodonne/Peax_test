@@ -130,6 +130,7 @@
     <Compile Include="Contracts\IEmployeeService.cs" />
     <Compile Include="DiConfig\DiServiceHostFactory.cs" />
     <Compile Include="Dtos\EmployeeDto.cs" />
+    <Compile Include="Dtos\EnableEmployeeRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\EmployeeService.svc.cs">
       <DependentUpon>EmployeeService.svc</DependentUpon>

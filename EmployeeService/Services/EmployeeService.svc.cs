@@ -30,9 +30,9 @@ namespace EmployeeService.Services
             return employee;
         }
 
-        public async Task EnableEmployeeAsync(int id, int enable)
+        public async Task EnableEmployeeAsync(EnableEmployeeRequest request)
         {
-            var updated = await _employeeRepository.EnableEmployeeAsync(id, enable);
+            var updated = await _employeeRepository.EnableEmployeeAsync(request.Id, request.Enable);
 
             if (!updated)
             {

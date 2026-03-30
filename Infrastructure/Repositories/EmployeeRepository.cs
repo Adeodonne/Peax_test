@@ -97,10 +97,11 @@ namespace Infrastructure.Repositories
                     command.CommandText = @"
                 UPDATE dbo.Employee 
                 SET Enable = @enable 
-                WHERE Id = @id";
+                WHERE ID = @id";
 
                     command.Parameters.Add(new SqlParameter("@enable", enable));
                     command.Parameters.Add(new SqlParameter("@id", id));
+
                     var rows = await command.ExecuteNonQueryAsync();
                     return rows > 0;
                 }
